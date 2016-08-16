@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
   {% include head.html %}
 
@@ -8,6 +8,14 @@
     {% include header.html %}
 
     <div class="page-content">
+
+      {% if page.url == '/' %}
+        <div class="site-home">
+          <span class="site-title">{{ site.title }}</span>
+          <p class="header-description">{{ site.description }}</p>
+        </div>
+      {% endif %}
+
       <div class="wrapper">
         {{ content }}
       </div>
